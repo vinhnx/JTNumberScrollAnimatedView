@@ -10,7 +10,7 @@
 @interface JTNumberScrollAnimatedView : UIView
 
 @property (strong, nonatomic) NSNumber *value;
-
+@property (nonatomic, assign) BOOL shouldStartAnimation;
 @property (strong, nonatomic) UIColor *textColor;
 @property (strong, nonatomic) UIFont *font;
 @property (assign, nonatomic) CFTimeInterval duration;

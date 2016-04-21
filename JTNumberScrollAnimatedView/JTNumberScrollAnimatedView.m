@@ -185,6 +185,10 @@
 
 - (void)createAnimations
 {
+    if (!self.shouldStartAnimation) {
+        self.shouldStartAnimation = YES;
+    }
+    
     [scrollLayers enumerateObjectsUsingBlock:^(CALayer *scrollLayer, NSUInteger idx, BOOL * _Nonnull stop) {
         [CATransaction begin];
         scrollLayer.hidden = YES;
